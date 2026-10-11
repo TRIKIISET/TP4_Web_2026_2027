@@ -1,0 +1,180 @@
+:root {
+    --dark: #0f172a;
+    --secondary: #cbd5e1;
+    --info: #38bdf8;
+    --light: #f8fafc;
+    --white: #ffffff;
+    --primary: #0284c7;
+    --info-light: #e0f2fe;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: var(--light);
+    font-family: system-ui, -apple-system, sans-serif;
+    height: 100dvh;
+}
+
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    height: 100%;
+    width: 100%;
+}
+
+
+header,
+footer {
+    background-color: var(--dark);
+    color: var(--white);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section {
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+}
+
+.sidebar-chapitres,
+article,
+aside {
+    background-color: var(--white);
+    border: 0.1rem solid var(--info);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+}
+aside ul{
+    list-style-position: inside;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+header img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+header h1 {
+    font-size: 1.2rem;
+    color: var(--info);
+}
+
+.nav-main {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0;
+}
+
+.nav-main a {
+    color: var(--secondary);
+    text-decoration: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.25rem;
+}
+
+.nav-main a:hover {
+    color: var(--white);
+}
+
+.sidebar-chapitres ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-chapitres h2{
+    font-size: 1.2rem;;
+}
+
+.sidebar-chapitres a {
+    color: var(--dark);
+    text-decoration: none;
+    padding: 0.3rem 0;
+}
+
+.sidebar-chapitres a:hover {
+    color: var(--primary);
+}
+
+main {
+    display: grid;
+    gap: 1rem;
+    padding-right: 0.25rem;
+}
+
+.overview {
+
+    border-left:0.25rem solid var(--primary);
+            border-radius: 0.5rem;
+            background-color: var(--info-light);
+            padding: 1rem 1.5rem;
+            margin-bottom:1rem;
+}
+.overview h2{
+    color:var(--primary);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    background-color: var(--primary);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 0.25rem;
+}
+
+footer ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+footer a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+/* 8. Disposition Desktop (>= 601px) */
+@media (min-width: 601px) {
+    .container {
+        grid-template-columns: minmax(14rem, 16rem) 1fr 12rem;
+        gap: 1.5rem;
+        padding: 1rem;
+        max-width: 1200px;
+        margin:0 auto;
+    }
+
+    header,
+    footer {
+        grid-column: 1 / -1;
+        flex-direction: row;
+    }
+    header div {
+            flex-direction: row;
+    }
+
+    main {
+        gap: 1.5rem;
+    }
+}

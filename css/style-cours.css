@@ -4,8 +4,8 @@
             --info: #38bdf8;
             --light: #f8fafc;
             --white: #ffffff;
-            --primary:#0284c7;
-            --info-light:#e0f2fe;
+            --primary: #0284c7;
+            --info-light: #e0f2fe;
         }
 
         body {
@@ -55,34 +55,40 @@
         nav a:hover {
             color: var(--white)
         }
-        main{
+
+        main {
             display: flex;
-            flex-direction: column;         
-            /* max-width: 1100px; */
-            margin:0 auto;
-            padding:0.5rem;          
+            flex-direction: column;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0.5rem;
 
         }
-        .hero{
-            border-left:0.25rem solid var(--primary);
+
+        .hero {
+            border-left: 0.25rem solid var(--primary);
             border-radius: 0.5rem;
             background-color: var(--info-light);
             padding: 1rem 1.5rem;
-            margin-bottom:1rem;
+            margin-bottom: 1rem;
+
         }
+
         .hero h2 {
-            color: var(--primary) ;
+            color: var(--primary);
         }
-        .cards-container{
+
+        .cards-container {
             display: flex;
-            gap:1.5rem;
-            flex-wrap:wrap;
+            gap: 1.5rem;
+            flex-wrap: wrap;
         }
-        .card{
+
+        .card {
             background-color: var(--white);
-            border-radius:0.5rem;
+            border-radius: 0.5rem;
             border: 1px solid var(--secondary);
-            padding:1.5rem;
+            padding: 1.5rem;
             font-size: 0.9rem;
             line-height: 1.5rem;
             display: flex;
@@ -92,15 +98,18 @@
             flex: 1;
             min-height: 9rem;
         }
-        .card p{
-            margin:0;
+
+        .card p {
+            margin: 0;
         }
-        .card h3{
-            margin:0;
+
+        .card h3 {
+            margin: 0;
         }
-        .card button{
+
+        .card button {
             background-color: var(--primary);
-            color:var(--white);
+            color: var(--white);
             padding: 0.5rem;
             border-radius: 0.25rem;
             text-align: center;
@@ -129,4 +138,64 @@
         footer ul a {
             color: var(--light);
             text-decoration: none;
+        }
+
+        /*    ADAPTATIONS MOBILES (écrans < 600px) */
+        @media (max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                justify-content: center;
+                gap: 0.6rem;
+            }
+
+            header div {
+                flex-direction: column;
+            }
+
+            header div h1 {
+                font-size: 1.1rem;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                padding: 0.8rem 1rem;
+            }
+
+            .hero h2 {
+                font-size: 1.2rem;
+            }
+
+            .cards-container {
+                flex-direction: column;
+                gap: 1rem;
+
+            }
+
+            .card {
+                line-height: 1rem;
+                width: 100%;
+                flex: 1 1 100%;
+                box-sizing: border-box;
+            }
+
+            .card button {
+                width: 100%;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+
+            footer ul {
+                margin: 0;
+                padding: 0;
+                justify-content: center;
+            }
+
         }
