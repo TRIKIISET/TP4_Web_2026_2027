@@ -1,4 +1,5 @@
-        :root {
+/* Cette solution correpond à l'approche desktop first et non mobile first */
+:root {
             --dark: #0f172a;
             --secondary: #cbd5e1;
             --info: #38bdf8;
